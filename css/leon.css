@@ -11,3 +11,82 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /* End global rules */
+
+div.header {
+    padding: 20px;
+}
+div.container {
+    width: 80%;
+    padding: 5px 15px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+img.logo {
+    width: 60px;
+}
+div.links {
+    position: relative;
+}
+div.icon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30px;
+    height: 100%;
+    justify-content: flex-end;
+    align-content: space-around;
+}
+span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+span:nth-child(2) {
+    width: 60%;
+    transition: width 0.4s;
+}
+ul {
+    list-style: none;
+    display: none;
+    position: absolute;
+    width: 200px;
+    bottom: -230px;
+    left: -170px;
+    padding: 0;
+    background-color: rgb(250, 250, 250);
+}
+ul::before {
+    content: " ";
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent rgb(250, 250, 250) transparent;
+    position: absolute;
+    right: 0px;
+    top: -30px;
+}
+li {
+    padding: 10px;
+    border-bottom: 1px solid rgb(146, 146, 146);
+    transition: padding-left 0.4s;
+}
+li:last-child {
+    border-bottom: none;
+}
+li a {
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(44, 44, 44);
+    height: 30px;
+    padding: 10px;
+    width: 100%;
+}
+
+div.links:hover span:nth-child(2) {
+    width: 100%;
+}
+div.links:hover ul {
+    display: block;
+}
+div.links li:hover {
+    padding-left: 30px;
+}
