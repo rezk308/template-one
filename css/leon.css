@@ -17,6 +17,11 @@ body {
     font-family: "Work Sans", sans-serif;
   }
 
+div.container {
+    width: 85%;
+    margin: auto;
+}  
+
 /* End global rules */
 
 /* Header section  */
@@ -24,8 +29,6 @@ div.header {
     padding: 20px;
 }
 div.header div.container {
-    width: 90%;
-    margin: auto;
     display: flex;
     justify-content: space-between;
 }
@@ -123,3 +126,30 @@ div.landing div.intro-text p {
     line-height: 1.8;
 }
 /* Landing section  */
+/* features section  */
+div.features {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+div.features div.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  div.features div.container div.feat {
+    padding: 20px;
+    text-align: center;
+  }
+  div.features div.container div.feat i {
+    color: var(--main-color);
+  }
+  div.features div.container div.feat h3 {
+    font-weight: 800;
+    margin: 30px 0;
+  }
+  div.features div.container div.feat p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+  }
